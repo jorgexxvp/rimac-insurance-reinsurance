@@ -28,11 +28,11 @@ export const Slider = memo<Props>(
             : slides
 
         const onNextClick = () => {
-            setStart(start + 1 >= slides.length ? 0 : start + 1)
+            setStart(start + 1 >= slides.length ? start : start + 1)
         }
 
         const onPrevClick = () => {
-            setStart(start - 1 >= 0 ? start - 1 : slides.length - 1)
+            setStart(start - 1 >= 0 ? start - 1 : start)
         }
 
         return (
@@ -47,23 +47,23 @@ export const Slider = memo<Props>(
                 <div className={styles.slider_group_button}>
                     <div
                         onClick={onPrevClick}
-                        className={styles.slider_group_button_left}
+                        className={`${styles.slider_group_button_left} ${start === 0 ? styles.border_light : styles.border_dark}`}
                     >
                         <ArrowLeftIcon
-                            className={styles.slider_group_button_left_icon}
+                            className={`${styles.slider_group_button_left_icon} ${start === 0 ? styles.light : styles.dark}`}
                         />
                     </div>
                     <p>
                         {start + 1}
-                        {' /'}
+                        {'/'}
                         {slides.length}
                     </p>
                     <div
                         onClick={onNextClick}
-                        className={styles.slider_group_button_right}
+                        className={`${styles.slider_group_button_right} ${start === 2 ? styles.border_light : styles.border_dark}`}
                     >
                         <ArrowLeftIcon
-                            className={styles.slider_group_button_right_icon}
+                            className={`${styles.slider_group_button_right_icon}  ${start === 2 ? styles.light : styles.dark}`}
                         />
                     </div>
                 </div>

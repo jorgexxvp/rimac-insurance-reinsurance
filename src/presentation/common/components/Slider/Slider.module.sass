@@ -10,12 +10,13 @@
     flex-direction: row
     gap: 24px
     justify-content: center
+    align-items: center
     p
       font-family: $font-primary
       font-size: 16px
       font-weight: 400
       line-height: 24px
-      letter-spacing: 0.20000000298023224px
+      letter-spacing: 6.2px
       text-align: center
 
     &_right
@@ -28,14 +29,7 @@
       width: 32px
       height: 32px
       cursor: pointer
-      border-radius: 50%
-      border: 2px solid $color-secondary
-      &_icon
-        width: 16px
-        height: 16px
-        fill: $color-secondary
-
-    
+          
 
   &_slides 
     display: flex
@@ -53,12 +47,22 @@
       & > *:last-child 
         margin-right: 0
 
-  
-  
-    
-  
-  
 
+.border_light
+  border-radius: 50%
+  border: 2px solid $color-gray-semi-dark
 
+.light
+  width: 16px
+  height: 16px
+  fill: $color-gray-semi-dark
 
+.border_dark
+  border-radius: 50%
+  border: 2px solid $color-secondary
+
+.dark
+  width: 16px
+  height: 16px
+  fill: $color-secondary
 

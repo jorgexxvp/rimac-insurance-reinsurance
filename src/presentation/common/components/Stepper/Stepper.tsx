@@ -33,7 +33,7 @@ export const Stepper: FC<IStepperProps> = ({ path }) => {
                     Paso{' '}
                     <span className={styles.stepper_step_text_step}>
                         {step}
-                    </span>
+                    </span>{' '}
                     de 2
                 </div>
             </div>

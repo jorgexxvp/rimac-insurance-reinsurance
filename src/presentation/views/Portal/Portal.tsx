@@ -43,7 +43,6 @@ export const Portal: FC = () => {
                 setIsLoading(true)
                 const userApi = await clientUserApi.GetUser()
                 setIsLoading(false)
-                console.log(userApi)
                 const { birthDay, lastName, name } = userApi
                 setUser({ ...user, birthDay, lastName, name })
             } catch (error) {
