@@ -28,9 +28,9 @@ export const Portal: FC = () => {
         try {
             const { list } = await clientPlanApi.GetPlans()
             setPLans([
-                { ...list[0], icon: HospitalIcon, recommended: false },
-                { ...list[1], icon: HomeIcon, recommended: true },
-                { ...list[3], icon: HospitalIcon, recommended: false },
+                { ...list[0], icon: HomeIcon, recommended: false },
+                { ...list[1], icon: HospitalIcon, recommended: true },
+                { ...list[3], icon: HomeIcon, recommended: false },
             ])
         } catch (error) {
             alert('Fallo al traer informacion intentelo mas tarde')
