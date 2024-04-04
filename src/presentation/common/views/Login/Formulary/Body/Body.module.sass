@@ -1,0 +1,61 @@
+@import '../../../../../toolbox/styles/_theme'
+
+.formulary
+    display: flex
+    flex-direction: column
+    gap: 24px
+    >p
+        color: $color-primary
+        font-family: $font-primary
+        line-height: 20px
+        letter-spacing: 0.2px
+        text-align: left
+        font-size: 14px
+        font-weight: 600
+        
+    &_form
+        display: flex
+        gap: 16px
+        flex-direction: column
+        
+        &_numberDocument
+            display: flex
+            gap: 8px
+            flex-direction: column
+            
+            &_input
+                display: grid
+                grid-template-columns: 2fr 3fr
+                border: 1px solid $color-gray-dark
+                align-items: center
+                border-radius: 8px
+                >div
+                    border-radius: 0px
+                    border-right: 1px solid $color-gray-dark
+    &_policy
+        display: flex
+        flex-direction: column
+        gap: 12px
+        div
+            display: flex
+            align-items: center
+            gap: 12px
+            >div
+                width: 20px
+                height: 20px
+            p
+                color: $color-text
+                line-height: 20px
+                font-family: $font-primary
+                font-size: 12px
+                font-weight: 400
+                text-align: left
+                
+        &_terms_Conditions
+            color: $color-primary
+            font-family: $font-primary
+            font-size: 12px
+            font-weight: 600
+            line-height: 20px
+            text-align: left
+            text-decoration: underline

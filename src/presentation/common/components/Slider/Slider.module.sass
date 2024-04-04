@@ -1,0 +1,64 @@
+@import '../../../toolbox/styles/_theme'
+
+.slider
+  gap: 68px
+  display: flex
+  flex-direction: column
+  align-items: center
+  &_group_button
+    display: flex
+    flex-direction: row
+    gap: 24px
+    justify-content: center
+    p
+      font-family: $font-primary
+      font-size: 16px
+      font-weight: 400
+      line-height: 24px
+      letter-spacing: 0.20000000298023224px
+      text-align: center
+
+    &_right
+      transform: rotateY(180deg)
+    &_left, &_right
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      width: 32px
+      height: 32px
+      cursor: pointer
+      border-radius: 50%
+      border: 2px solid $color-secondary
+      &_icon
+        width: 16px
+        height: 16px
+        fill: $color-secondary
+
+    
+
+  &_slides 
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 300px
+    &_list 
+      display: flex
+      padding: 0
+      list-style-type: none
+      width: 288px
+      height: 640px
+      & > * 
+        margin-right: 32px
+      & > *:last-child 
+        margin-right: 0
+
+  
+  
+    
+  
+  
+
+
+
+

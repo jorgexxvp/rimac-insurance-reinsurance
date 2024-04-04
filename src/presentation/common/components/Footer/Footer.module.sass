@@ -1,0 +1,47 @@
+@import '../../../toolbox/styles/_theme'
+
+.footer
+    display: flex
+    z-index: $zIndex-2
+    background-color: $color-primary
+    overflow-x: hidden
+    &_body
+        display: flex
+        align-items: center
+        flex-direction: column
+        gap: 24px
+        max-width: $breakpoint-lg
+        margin: 0 auto
+        width: 100%
+        padding: 32px 24px
+        &_logo_desktop
+            display: none
+            path
+                fill: $color-white
+        &_logo_mobile
+            path
+                fill: $color-white
+        >p
+            color: $color-white
+            font-family: $font-primary
+            font-weight: 400
+            line-height: 16px
+            text-align: left
+            font-size: clamp(0.75rem, 0.7115rem + 0.1923vw, 0.875rem)
+        &_line
+            height: 1px
+            width: 100%
+            background-color: $color-blue-dark
+        
+        @media screen and (min-width: $breakpoint-sm)
+            flex-direction: row
+            justify-content: space-between
+            &_line
+                display: none
+            &_logo_desktop
+                display: block
+            &_logo_mobile
+                display: none
+            >p
+                line-height: 20px
+                

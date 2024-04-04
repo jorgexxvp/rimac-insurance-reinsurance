@@ -1,0 +1,68 @@
+@import '../../toolbox/styles/_theme'
+
+.login
+    padding: clamp(0rem, -0.6154rem + 3.0769vw, 2rem) 0 clamp(1.5rem, 1.3462rem + 0.7692vw, 2rem) 0
+    z-index: $zIndex-2
+    align-items: center
+    &_circle_violet
+        width: 345.6px
+        height: 870.4px
+        inset: 520px auto 0px -300px
+        filter: blur(100px)
+        background-repeat: no-repeat
+        z-index: $zIndex-1
+        position: fixed
+        background: radial-gradient(farthest-side, $color-violet 98%, transparent)
+        @media screen and (min-width: $breakpoint-sm)
+            inset: 250px auto 0px -250px
+    &_circle_skye
+        inset: -700px -218px 0px auto
+        filter: blur(100px)
+        width: 345.6px
+        height: 870.4px
+        background-repeat: no-repeat
+        z-index: $zIndex-1
+        position: fixed
+        background: radial-gradient(farthest-side, $color-skye 98%, transparent)
+        @media screen and (min-width: $breakpoint-sm)
+            inset: 64px -280px 0px auto
+    &_image_wrapper
+        display: none
+        img
+            width: calc(100% + 32px)
+        @media screen and (min-width: $breakpoint-sm)
+            display: grid
+            grid-column-start: 1
+            grid-column-end: 6
+    &_formulary
+        display: none
+        @media screen and (min-width: $breakpoint-sm)
+            display: grid
+            padding: 0 0 0 32px
+            grid-column-start: 7
+            grid-column-end: 11
+            gap: 8px
+            width: calc( 100% + 32px)
+    &_mobile
+        display: flex
+        flex-direction: column
+        gap: 24px
+        display: grid
+        grid-column-start: 1
+        grid-column-end: 5
+        z-index: $zIndex-2
+        &_header
+            display: flex
+            align-items: center
+            gap: 12px
+            justify-content: space-between
+            img
+                width: clamp(6.9375rem, -0.1587rem + 35.4808vw, 30rem)
+                height: clamp(8.4375rem, 0.2644rem + 40.8654vw, 35rem)
+
+        &_line
+            height: 1px
+            background-color: $color-gray
+            width: 100%
+        @media screen and (min-width: $breakpoint-sm)
+            display: none

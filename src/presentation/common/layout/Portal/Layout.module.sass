@@ -1,0 +1,42 @@
+@import '../../../toolbox/styles/_theme'
+
+.portal_layout
+    &_body
+        display: grid
+        grid-column-start: 1
+        grid-column-end: 5
+        gap: 32px
+        @media screen and (min-width: $breakpoint-sm)
+            grid-column-start: 2
+            grid-column-end: 12
+        &_content
+            display: flex
+            flex-direction: column
+            padding: clamp(5.0625rem, 4.9279rem + 0.6731vw, 5.5rem) 0 clamp(2.5rem, 1.7308rem + 3.8462vw, 5rem) 0
+            @media screen and (min-width: $breakpoint-sm)
+                gap: 56px
+            &_back
+                display: none
+                figure
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    border: 2px solid $color-secondary
+                    border-radius: 50%
+                    padding: 0.5px
+                    svg
+                        path
+                            fill: $color-secondary
+                            stroke-width: 2px
+                p
+                    color: $color-secondary
+                    font-family: $font-primary
+                    font-size: 18px
+                    font-weight: 500
+                    line-height: 20px
+                    letter-spacing: 0.5px
+                    text-align: center
+                @media screen and (min-width: $breakpoint-sm)
+                    display: flex
+                    align-items: center
+                    gap: 8px

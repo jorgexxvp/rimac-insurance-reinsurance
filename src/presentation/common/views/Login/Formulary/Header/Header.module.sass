@@ -1,0 +1,31 @@
+@import '../../../../../toolbox/styles/_theme'
+
+.form_header
+    display: flex
+    gap: clamp(0.5rem, 0.3462rem + 0.7692vw, 1rem)
+    flex-direction: column
+    @media screen and (min-width: $breakpoint-sm)
+        max-width: 352px
+    &_card
+        width: fit-content
+        padding: clamp(0.125rem, 0.0865rem + 0.1923vw, 0.25rem) 8px
+        border-radius: 4px
+        background: linear-gradient(86.01deg, $color-skye 0%, $color-fluorescent-green 100%)
+        >p
+            color: $color-primary
+            font-family: $font-primary
+            font-weight: 700
+            line-height: 16px
+            letter-spacing: 0.4px
+            text-align: left
+            font-size: clamp(0.6875rem, 0.6298rem + 0.2885vw, 0.875rem)
+    h1
+        color: $color-primary
+        font-family: $font-primary
+        line-height: clamp(2.25rem, 2.1731rem + 0.3846vw, 2.5rem)
+        text-align: left
+        font-size: clamp(1.75rem, 1.6731rem + 0.3846vw, 2rem)
+        font-weight: 700
+        
+
+    

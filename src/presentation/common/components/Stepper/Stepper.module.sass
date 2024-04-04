@@ -1,0 +1,51 @@
+@import '../../../toolbox/styles/_theme'
+
+.stepper
+    display: grid
+    grid-template-columns: 104px 1fr
+    padding: 12px 32px
+    align-items: center
+    justify-content: center
+    gap: 16px
+    border-bottom: 1px solid $color-gray-semi-dark
+    &_step
+        display: flex
+        align-items: center
+        gap: 12px
+        &_icon
+            width: 24px
+            height: 24px
+            border: 1px solid $color-gray-semi-dark
+            display: flex
+            align-items: center
+            justify-content: center
+            border-radius: 50%
+            &_arrow
+                width: 12px
+                height: 12px
+                fill: $color-secondary
+
+
+        &_text
+            color: $color-primary
+            font-feature-settings: 'clig' off, 'liga' off
+            font-family: $font-primary
+            font-size: 10px
+            font-style: normal
+            font-weight: 700
+            line-height: 16px
+            letter-spacing: 0.8px
+            text-transform: uppercase
+            white-space: nowrap
+            &_step
+                transition: all 1.5s ease-in-out
+
+    &_bar
+        height: 6px
+        width: 0%
+        background-color: $color-secondary
+        border-radius: 16px
+        transition: width 1.5s ease-in-out
+
+    &_bar_completed
+        width: 100%
