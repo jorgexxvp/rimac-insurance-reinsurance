@@ -2,28 +2,6 @@
 
 Este proyecto es una aplicación web desarrollada para simular cotizaciones de seguros de la empresa Rimac. Utiliza tecnologías modernas como React.js para la interfaz de usuario, axios para realizar peticiones HTTP a la API, react-router-dom para manejar las rutas dentro de la aplicación, Sass como preprocesador de CSS para una mejor organización y mantenimiento del estilo, y Zustand como manejador de estados globales.
 
-# Estructura del proyecto
-rimac-insurance-reinsurance/
-│
-├── src/
-│   │── core
-│       │── application
-│       │── domain
-│       │── infraestructure
-│   |── presentation
-│     ├── common/
-│     ├── assets/
-│     ├── views/
-│     ├── toolbox/
-│     ├── zustand/
-│     ├── routes/
-
-│
-├── package.json
-├── tsconfig.json
-├── .eslintrc.json
-└── .prettierrc.json
-
 # Levantar el proyecto 
 Para levantar el proyecto localmente, sigue los siguientes pasos:
 
