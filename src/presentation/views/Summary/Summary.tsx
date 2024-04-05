@@ -35,7 +35,7 @@ export const Summary: FC = () => {
                     <div className={styles.summary_card_plan}>
                         <p>Plan elegido</p>
                         <p>{plan?.name}</p>
-                        <p>Costo del Plan: ${plan?.price} al mes</p>
+                        <p>Costo del Plan: ${plan?.disccount} al mes</p>
                     </div>
                 </div>
             </div>
