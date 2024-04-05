@@ -1,4 +1,4 @@
-import { memo, ReactNode, useState } from 'react'
+import { cloneElement, memo, ReactNode, useState } from 'react'
 
 import { ArrowLeftIcon } from '@/presentation/toolbox/assets/icons'
 
@@ -39,8 +39,12 @@ export const Slider = memo<Props>(
             <div className={styles.slider}>
                 <div className={styles.slider_slides}>
                     <ul className={styles.slider_slides_list}>
-                        {visibleItems.map((slide: Slide) =>
-                            children ? children(slide) : null,
+                        {visibleItems.map((slide: Slide, index: number) =>
+                            children
+                                ? cloneElement(children(slide), {
+                                      key: index,
+                                  })
+                                : null,
                         )}
                     </ul>
                 </div>

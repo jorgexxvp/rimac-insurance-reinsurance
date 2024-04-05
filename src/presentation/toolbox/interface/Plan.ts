@@ -5,4 +5,5 @@ export interface IPlan {
     age: number
     icon: string
     recommended: boolean
+    disccount: number
 }

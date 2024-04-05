@@ -47,9 +47,11 @@
                 color: $color-text
                 line-height: 20px
                 font-family: $font-primary
-                font-size: 12px
+                font-size: 14px
                 font-weight: 400
                 text-align: left
+                @media screen and (min-width: $breakpoint-sm)
+                    font-size: 12px
                 
         &_terms_Conditions
             color: $color-primary

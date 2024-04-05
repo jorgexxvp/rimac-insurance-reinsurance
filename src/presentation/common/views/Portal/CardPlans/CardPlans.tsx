@@ -13,7 +13,7 @@ interface ICardPlansProps {
 }
 
 export const CardPlans: FC<ICardPlansProps> = ({ plans }) => {
-    const { description, icon, name, price, recommended } = plans
+    const { description, disccount, icon, name, price, recommended } = plans
 
     const navigate = useNavigate()
     const { setPlan } = useUserInfoState()
@@ -25,30 +25,33 @@ export const CardPlans: FC<ICardPlansProps> = ({ plans }) => {
 
     return (
         <div className={`${styles.custom_card} ${styles.custom_card_large}`}>
-            <div className={styles.Card_plans}>
-                <div className={styles.Card_plans_head}>
+            <div className={styles.card_plans}>
+                <div className={styles.card_plans_head}>
                     {recommended && (
-                        <div className={styles.Card_plans_head_recommended}>
+                        <div className={styles.card_plans_head_recommended}>
                             Plan recomendado
                         </div>
                     )}
-                    <div className={styles.Card_plans_head_content}>
-                        <div className={styles.Card_plans_head_content_body}>
+                    <div className={styles.card_plans_head_content}>
+                        <div className={styles.card_plans_head_content_body}>
                             <h3>{name}</h3>
                             <div
                                 className={
-                                    styles.Card_plans_head_content_body_description
+                                    styles.card_plans_head_content_body_description
                                 }
                             >
                                 <p>Costo del plan</p>
-                                <p>${price} al mes</p>
+                                <p>
+                                    ${price} {disccount ? 'antes' : 'al mes'}
+                                </p>
+                                <p>${disccount} al mes</p>
                             </div>
                         </div>
                         <img src={icon} alt={name} />
                     </div>
                 </div>
-                <div className={styles.Card_plans_line} />
-                <div className={styles.Card_plans_content}>
+                <div className={styles.card_plans_line} />
+                <div className={styles.card_plans_content}>
                     <ul>
                         {description.map((item, idx) => (
                             <li key={idx}>{item}</li>
